@@ -12,13 +12,17 @@ return {
         ⣴⣿⠟⠛⢿⣦⡀⣿⡟⠛⠛⠛⣿⣷⣰⣿⠟⠛⢿⣷⡄⢠⣠⣤⣿⠻⠗⠀⣴⣿⠟⠛⢿⣦⣸⣿⣧⣾⡿⢛⣿⡿⠟⠻⣿⣦⠀
         ⣿⡇⠀⠀⠀⣿⡇⣿⣷⣄⡀⠀⠉⠁⣿⣇⠀⠀⠀⣿⡇⣀⡉⠻⢿⣶⣄⡰⣿⣇⠀⠀⠀⣿⡿⣿⣿⣅⡀⢸⣿⡀⠀⠀⢸⣿⠀
         ⠙⠿⣷⣶⣦⣿⡇⠛⠋⠛⢿⣷⣤⡀⠙⠿⣷⣶⡦⣿⡇⢿⣷⣶⣶⣿⣿⣿⠙⠿⣷⣶⡆⣿⡟⠛⠋⠻⢿⣶⣿⣿⣷⣶⣼⣿
+
+                          Be yourself
       ]]
 
+      -- dashboard.section.header.
       dashboard.section.header.val = vim.split(logo, "\n")
+
 
         -- stylua: ignore
         dashboard.section.buttons.val = {
-          dashboard.button("f", " Find file",       "<cmd> Telescope find_files <cr>"),
+          dashboard.button("f", " Find file","<cmd> Telescope find_files <cr>"),
           dashboard.button("n", " New file", "<cmd> ene <BAR> startinsert <cr>"),
           dashboard.button("r", " Recent", "<cmd> Telescope oldfiles <cr>"),
           dashboard.button("q", " Quit", "<cmd> qa <cr>")
@@ -35,6 +39,7 @@ return {
       dashboard.opts.layout[1].val = 8
       return dashboard
     end,
+
 
     config = function(_, dashboard)
       -- close Lazy and re-open when the dashboard is ready
